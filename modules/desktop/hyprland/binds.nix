@@ -27,10 +27,10 @@ in
             "$mainMod CTRL, S, exec, grimshot copy screen"
             
             # Set keyboard
-            "$mainMod, Q, exec, $set_kb 0"
-            "$mainMod, A, exec, $set_kb 1"
-            "$mainMod, Z, exec, $set_kb 2"
-            "$mainMod, X, exec, $set_kb 3"
+            "$mainMod, Q, exec, $set_kb 0" # en
+            "$mainMod, A, exec, $set_kb 1" # cz
+            "$mainMod, Z, exec, $set_kb 2" # ru
+            "$mainMod, X, exec, $set_kb 3" # ua
             
 
             "$mainMod SHIFT, Q, killactive,"
@@ -39,6 +39,7 @@ in
             "$mainMod, V, togglefloating,"
             "$mainMod, P, pseudo,"
             "$mainMod, J, togglesplit,"
+            "$mainMod, F, fullscreen,"
 
 
             # Move focus with mainMod + arrow keys
@@ -46,6 +47,11 @@ in
             "$mainMod, right, movefocus, r"
             "$mainMod, up, movefocus, u"
             "$mainMod, down, movefocus, d"
+
+            "$mainMod SHIFT, left, movewindow, l"
+            "$mainMod SHIFT, right, movewindow, r"
+            "$mainMod SHIFT, up, movewindow, u"
+            "$mainMod SHIFT, down, movewindow, d"
 
             # Switch workspaces with mainMod + [0-9]
             "$mainMod, 1, workspace, 1"

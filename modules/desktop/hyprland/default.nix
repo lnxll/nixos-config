@@ -104,7 +104,7 @@ in
             #==================================================
             input = {
               kb_layout = "us, cz, ru, ua";
-              kb_variant = ", qwerty, os_winkeys, winkeys";
+              kb_variant = ", qwerty, legacy, winkeys";
               kb_options = "grp:win_space_toggle";
 
               follow_mouse = 1;
