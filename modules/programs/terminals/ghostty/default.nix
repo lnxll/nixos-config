@@ -1,7 +1,7 @@
 {config, ...}:
 {
   home-manager.sharedModules = [(
-    {...}: {
+    {
       programs.ghostty = {
         enable = true;
         enableBashIntegration = true;

@@ -1,10 +1,7 @@
 {config, pkgs, ...}:
-let
-  hostname = config.var.hostname;
-in
 {
   networking = {
-    hostName = hostname;
+    hostName = "x390y";
     networkmanager.enable = true;
   };
 

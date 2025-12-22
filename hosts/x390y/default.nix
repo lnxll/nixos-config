@@ -4,10 +4,10 @@
     [
       ../../modules
       ./hardware-configuration.nix
-      ./variables.nix
     ];
   
   environment.systemPackages = with pkgs; [
+    obsidian
     ayugram-desktop       # Telegram
     ani-cli               # Anime
     youtube-music         # YT MUSIC

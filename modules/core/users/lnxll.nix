@@ -1,6 +1,6 @@
-{config, pkgs, ... }:
+{pkgs, ... }:
 let
-  username = config.var.username;
+  username = "lnxll";
 in
 {
   home-manager.users.${username} = {
