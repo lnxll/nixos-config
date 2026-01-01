@@ -46,6 +46,7 @@
     feh
     mpv
     bat
+    tenki
     cava
     cmatrix
     ayugram-desktop       # Telegram

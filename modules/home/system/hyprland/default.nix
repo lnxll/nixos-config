@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{inputs, pkgs, ... }: {
   home.packages = with pkgs; [
     brightnessctl
     wofi
@@ -6,7 +6,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-
+    systemd.enable = false;
     settings = {
       #==================================================
       # MONITORS
@@ -20,6 +20,7 @@
       # load all the plugins you installed
       "udiskie --automount --notify --smart-tray &"
       "hyprctl plugin load $HYPR_PLUGIN_DIR/lib/libhyprexpo.so"
+      "swww-daemon &"
       "waybar &"
       "swaync &"
       "nm-applet &"
