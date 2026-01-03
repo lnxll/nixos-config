@@ -29,11 +29,10 @@
   services.udisks2.enable = true;
 
   environment.systemPackages = with pkgs; [
+    rar
     btop
     htop
     ntfs3g
-    amberol
-    quodlibet
     vlc
     udiskie
     sway-contrib.grimshot
@@ -42,15 +41,14 @@
     git
     ghostty
     yazi
-    vscodium
     feh
     mpv
     bat
     tenki
     cava
-    cmatrix
     ayugram-desktop       # Telegram
     youtube-music         # YT MUSIC
+    digikam
   ];
   
   hardware.graphics.enable = true;

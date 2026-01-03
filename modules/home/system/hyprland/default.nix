@@ -1,12 +1,13 @@
 {inputs, pkgs, ... }: {
   home.packages = with pkgs; [
+    inputs.caelestia-shell.packages.${pkgs.system}.default
     brightnessctl
     wofi
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.enable = false;
+    systemd.enable = false;  
     settings = {
       #==================================================
       # MONITORS
@@ -19,9 +20,9 @@
       exec-once = [
       # load all the plugins you installed
       "udiskie --automount --notify --smart-tray &"
-      "hyprctl plugin load $HYPR_PLUGIN_DIR/lib/libhyprexpo.so"
       "swww-daemon &"
-      "waybar &"
+      # "waybar &"
+      "caelestia-shell &"
       "swaync &"
       "nm-applet &"
       "wl-paste --type text --watch cliphist store"
@@ -35,8 +36,8 @@
       # GENERAL
       #==================================================
       general = {
-      gaps_in = 4;
-      gaps_out = 8;
+      gaps_in = 0;
+      gaps_out = 0;
       border_size = 0;
       # "col.active_border" = "rgba(ffffffee)";
       # "col.inactive_border" = "rgba(595959aa)";
@@ -49,11 +50,11 @@
       # DECORATION
       #==================================================
       decoration = {
-        rounding = 6;
+        rounding = 0;
         rounding_power = 2;
 
-        active_opacity = 0.9;
-        inactive_opacity = 0.9;
+        active_opacity = 1;
+        inactive_opacity = 1;
 
         shadow = {
             enabled = false;
