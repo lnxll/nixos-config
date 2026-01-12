@@ -1,7 +1,7 @@
 {pkgs, ...}:
 {
   stylix = {
-    enable = false;
+    enable = true;
     polarity = "dark";
     
     cursor = {

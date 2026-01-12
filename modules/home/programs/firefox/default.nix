@@ -1,6 +1,9 @@
 {config, ...}:
 {
   config = {
+    stylix.targets.firefox.profileNames = [ 
+      "default"
+    ];
     programs.firefox = {
       enable = true;
 
@@ -60,10 +63,7 @@
         ExtensionSettings = {
           # default_area: navbar / menupanel
           
-          "*" = {
-            blocked_install_message = "Addon is not added in the nix config";
-            installation_mode = "blocked";
-          };
+          
           "uBlock0@raymondhill.net" = {
             private_browsing = true;
             default_area = "navbar";
@@ -78,12 +78,12 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/traduzir-paginas-web/latest.xpi";
           };
           # Vimium
-          # "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
-          #   private_browsing = true;
-          #   default_area = "navbar";
-          #   installation_mode = "force_installed";
-          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
-          # };
+          "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+            private_browsing = true;
+            default_area = "navbar";
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+          };
         };
       };
     };

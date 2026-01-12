@@ -1,6 +1,5 @@
 {inputs, pkgs, ... }: {
   home.packages = with pkgs; [
-    inputs.caelestia-shell.packages.${pkgs.system}.default
     brightnessctl
     wofi
   ];
@@ -15,29 +14,11 @@
       monitor = "eDP-1, preferred, auto, 1";
 
       #==================================================
-      # EXEC-ONCE
-      #==================================================
-      exec-once = [
-      # load all the plugins you installed
-      "udiskie --automount --notify --smart-tray &"
-      "swww-daemon &"
-      # "waybar &"
-      "caelestia-shell &"
-      "swaync &"
-      "nm-applet &"
-      "wl-paste --type text --watch cliphist store"
-      "wl-paste --type image --watch cliphist store"
-      "pgrep hyprpaper"
-      "iio-hyprland"
-      "systemctl --user start hyprpolkitagent"
-      ];
-
-      #==================================================
       # GENERAL
       #==================================================
       general = {
-      gaps_in = 0;
-      gaps_out = 0;
+      gaps_in = 4;
+      gaps_out = 8;
       border_size = 0;
       # "col.active_border" = "rgba(ffffffee)";
       # "col.inactive_border" = "rgba(595959aa)";
@@ -50,11 +31,11 @@
       # DECORATION
       #==================================================
       decoration = {
-        rounding = 0;
+        rounding = 8;
         rounding_power = 2;
 
-        active_opacity = 1;
-        inactive_opacity = 1;
+        active_opacity = 0.9;
+        inactive_opacity = 0.9;
 
         shadow = {
             enabled = false;
