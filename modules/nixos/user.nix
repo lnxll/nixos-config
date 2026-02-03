@@ -34,6 +34,8 @@
         "networkmanager"
         "wheel"
         "storage"
+        "kvm"
+        "adbusers"
       ];
     };
   };

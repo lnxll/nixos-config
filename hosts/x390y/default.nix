@@ -8,13 +8,12 @@
     ];
 
   networking.hostName = "x390y"; # Define your hostname.
-
-
+  programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
+    lm_sensors
     nautilus
-    jq # for autorotation
-    puddletag    
-    ntfs3g
+    jq                    # for autorotation
+    puddletag
     vlc
     sway-contrib.grimshot
     sxiv
@@ -25,20 +24,25 @@
     mpv
     tenki
     cava
+    digikam
     ayugram-desktop       # Telegram
     youtube-music         # YT MUSIC
-    digikam
-
+    vesktop               # Discord
+    mpris-timer
+    foot
+    heimdall
+    heimdall-gui
+    android-tools
+    jmtpfs
+    picard
+    
     # python develop
     sqlitestudio
     postgresql
   ];
-
+  # rotate display
   hardware.sensor.iio.enable = true; 
   programs.iio-hyprland.enable = true;
-  
- 
-  services.libinput.enable = true; # touchscreen
   services.iptsd.config.Touchscreen.DisableOnStylus = true;
 
   

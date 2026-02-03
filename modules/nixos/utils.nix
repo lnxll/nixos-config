@@ -19,24 +19,32 @@
 
   services = {
     power-profiles-daemon.enable = true;
+    libinput = {
+      enable = true;
+    };
     # for mount
     devmon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
-    libinput.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     udiskie
+    ntfs3g
     wget
     git
-    bat
     btop
     htop
     rar
     unrar
+    unzip
     bat
     vim
   ];
+
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+  };
 }

@@ -1,7 +1,7 @@
 {
     wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
-    "$terminal" = "ghostty";
+    "$terminal" = "foot";
     "$menu" = "wofi --show drun";
     "$fileMgr_gui" = "dolphin";
     "$fileMgr_cli" = "$terminal -e yazi";
