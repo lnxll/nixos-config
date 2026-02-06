@@ -41,6 +41,7 @@
     unzip
     bat
     vim
+    lm_sensors
   ];
 
   services.syncthing = {

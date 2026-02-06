@@ -5,5 +5,9 @@
     enableBashCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      "c" = "clear";
+      "ff" = "fastfetch";
+    };
   };
 }
